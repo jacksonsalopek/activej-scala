@@ -31,6 +31,9 @@ To run the application, ensure port 8080 is available. Then, you can run any of
 the following:
 
 ```bash
+# Run compiled native image
+./target/native-image/activej-scala
+
 # Run as native image
 sbt nativeImageRun
 
