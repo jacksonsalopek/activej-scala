@@ -6,7 +6,7 @@ import io.activej.launcher.Launcher
 import io.activej.launchers.http.MultithreadedHttpServerLauncher
 import io.activej.worker.annotation.{Worker, WorkerId}
 
-object MultiThreaded extends MultithreadedHttpServerLauncher {
+object MultiThreaded extends MultithreadedHttpServerLauncher:
   @Provides
   @Worker
   def servlet(@WorkerId workerId: Int): AsyncServlet = { request =>
@@ -20,4 +20,3 @@ object MultiThreaded extends MultithreadedHttpServerLauncher {
     val launcher: Launcher = MultiThreaded
     launcher.launch(args)
   }
-}

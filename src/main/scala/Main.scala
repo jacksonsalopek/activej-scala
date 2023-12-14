@@ -5,7 +5,7 @@ import io.activej.inject.annotation.Provides
 import io.activej.launcher.Launcher
 import io.activej.launchers.http.HttpServerLauncher
 
-object Main extends HttpServerLauncher {
+object Main extends HttpServerLauncher:
   @Provides
   def servlet(): AsyncServlet = { request =>
     HttpResponse
@@ -18,4 +18,3 @@ object Main extends HttpServerLauncher {
     val launcher: Launcher = Main
     launcher.launch(args)
   }
-}
