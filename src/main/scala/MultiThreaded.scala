@@ -1,3 +1,5 @@
+package io.skintracker
+
 import io.activej.http.{AsyncServlet, HttpResponse}
 import io.activej.inject.annotation.Provides
 import io.activej.launcher.Launcher

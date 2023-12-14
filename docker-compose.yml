@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:16.1-alpine
+    restart: always
+    env_file:
+      - ./database.env
+
+  activej-scala:
+    image: activej-scala:latest
+    ports:
+      - "8080:8080"
