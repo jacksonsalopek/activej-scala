@@ -8,7 +8,7 @@ object Main extends HttpServerLauncher {
   def servlet(): AsyncServlet = { request =>
     HttpResponse
       .ok200()
-      .withPlainText(html.index("World").toString())
+      .withHtml(html.index("World").toString())
       .toPromise()
   }
 
