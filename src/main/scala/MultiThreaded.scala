@@ -10,10 +10,9 @@ object MultiThreaded extends MultithreadedHttpServerLauncher:
   @Provides
   @Worker
   def servlet(@WorkerId workerId: Int): AsyncServlet = { request =>
-    HttpResponse
-      .ok200()
-      .withHtml(html.index("Worker #" + workerId).toString())
-      .toPromise()
+    HttpResponse.ok200
+      .withHtml(html.index("Worker #" + workerId).toString)
+      .toPromise
   }
 
   def main(args: Array[String]): Unit = {

@@ -7,11 +7,10 @@ import io.activej.launchers.http.HttpServerLauncher
 
 object Main extends HttpServerLauncher:
   @Provides
-  def servlet(): AsyncServlet = { request =>
-    HttpResponse
-      .ok200()
-      .withHtml(html.index("World").toString())
-      .toPromise()
+  def servlet: AsyncServlet = { request =>
+    HttpResponse.ok200
+      .withHtml(html.index("World").toString)
+      .toPromise
   }
 
   def main(args: Array[String]): Unit = {
